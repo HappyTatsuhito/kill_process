@@ -5,7 +5,9 @@
 
 # Download  
 ホームなどにスクリプトのみをダウンロードする場合は　　
+
 `wget https://raw.githubusercontent.com/HappyTatsuhito/kill_process/master/kill_process.py`　　
+
 でダウンロードして下さい。　　
 
 ---
