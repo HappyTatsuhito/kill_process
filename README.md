@@ -14,6 +14,7 @@
 
 # Usage  
 `$ python kill_process.py -オプション`　　
+
 or  
 `$ ./kill_process.py -オプション`　　
 
