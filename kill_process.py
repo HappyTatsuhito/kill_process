@@ -36,11 +36,11 @@ def killAll():
             break
         subprocess.call('sudo kill -9 ' + ps_list[i][0], shell=True)
 
-def killRuning():
-    print ('runing')
+def killRunning():
+    print ('running')
     ps_list = getProcess()
     for i in range(len(ps_list)):
-        if 'kill_process.py' in ps_list[i][-2]:
+        if 'kill_process.py' in ps_list[i][-1] or 'kill_process.py' in ps_list[i][-2]:
             break
         if ps_list[i][4] != 'bash':
             subprocess.call('kill -2 ' + ps_list[i][0], shell=True)
@@ -52,7 +52,7 @@ if __name__ == '__main__':
         if args[1] == '-a':
             killAll()
         elif args[1] == '-r':
-            killRuning()
+            killRunning()
     except IndexError:
-        print ("Please select the \'-a\' or \'-r\' option.")
+        killRunning()
         
